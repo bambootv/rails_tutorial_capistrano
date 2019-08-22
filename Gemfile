@@ -40,6 +40,12 @@ gem "pygments.rb", "~> 0.6.3"
 gem "redcarpet", "~> 3.3", ">= 3.3.4"
 gem "simplemde-rails"
 
+gem "capistrano"
+gem "capistrano3-puma"
+gem "capistrano-rails", require: false
+gem "capistrano-bundler", require: false
+gem "capistrano-rvm"
+
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
