@@ -1,0 +1,28 @@
+version: "3"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:9.6
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - /tmp/database_backup:/var/lib/postgresql/data
+  spring:
+    container_name: spring
+    build: .
+    volumes:
+      - .:/blog
+    restart: always
+    command: "bundle exec spring server"
+  app:
+    container_name: app
+    build: .
+    volumes:
+      - .:/blog
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_USER: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PASSWORD: postgres
