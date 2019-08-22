@@ -1,0 +1,5 @@
+{
+  "name": "rails_capistrano",
+  "private": true,
+  "dependencies": {}
+}
