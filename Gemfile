@@ -37,7 +37,7 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "pygments.rb", "~> 0.6.3"
-gem "redcarpet", "~> 3.3", ">= 3.3.4"
+gem "redcarpet", "~> 3.5"
 gem "simplemde-rails"
 
 group :development, :test do
